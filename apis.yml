@@ -1,7 +1,7 @@
 ---
 aid: seed
 name: Seed API
-description: Seed API enables connection to Cantaloupe’s cloud services for cashless
+description: Seed API enables connection to Cantaloupe's cloud services for cashless
   payment processing, real-time sales tracking, and business management.
 image: https://www.cantaloupe.com/wp-content/uploads/2020/01/payments-and-processing-header-1.svg
 apis:
