@@ -4,7 +4,7 @@ name: Seed API
 description: Seed API enables connection to Cantaloupe's cloud services for cashless
   payment processing, real-time sales tracking, and business management.
 image: https://www.cantaloupe.com/wp-content/uploads/2020/01/payments-and-processing-header-1.svg
-url: https://github.com/api-search/seed-platform/edit/main/apis.yml
+url: https://raw.githubusercontent.com/api-search/seed-platform/refs/heads/main/apis.yml
 apis:
 - name: Payment Processing
   description: Process cashless payments through various methods, including debit/credit
