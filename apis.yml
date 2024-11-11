@@ -10,19 +10,18 @@ apis:
     cards, digital wallets, and NFC.
   humanURL: https://api.cantaloupe.com/seed-api/v1/payment-processing
   properties:
-    - type: Documentation
-      url: https://api.cantaloupe.com/seed-api/v1/payment-processing
-
+  - type: Documentation
+    url: https://api.cantaloupe.com/seed-api/v1/payment-processing
 - name: Sales Tracking
   description: Retrieve real-time sales data for analysis and reporting.
   humanURL: https://api.cantaloupe.com/seed-api/v1/sales-tracking
   properties:
-    - type: Documentation
-      url: https://api.cantaloupe.com/seed-api/v1/sales-tracking
+  - type: Documentation
+    url: https://api.cantaloupe.com/seed-api/v1/sales-tracking
 - name: Billing
   description: Streamline transaction processing and generate billing reports across
     multiple business channels.
   humanURL: https://api.cantaloupe.com/seed-api/v1/billing
   properties:
-    - type: Documentation
-      url: https://api.cantaloupe.com/seed-api/v1/billing
+  - type: Documentation
+    url: https://api.cantaloupe.com/seed-api/v1/billing
