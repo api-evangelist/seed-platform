@@ -1,28 +1,40 @@
----
-aid: seed
-name: Seed API
-description: Seed API enables connection to Cantaloupe's cloud services for cashless
-  payment processing, real-time sales tracking, and business management.
-image: https://www.cantaloupe.com/wp-content/uploads/2020/01/payments-and-processing-header-1.svg
-url: https://raw.githubusercontent.com/api-search/seed-platform/refs/heads/main/apis.yml
+aid: seed-platform
+url: >-
+  https://raw.githubusercontent.com/api-search/seed-platform/refs/heads/main/apis.yml
 apis:
-- name: Payment Processing
-  description: Process cashless payments through various methods, including debit/credit
-    cards, digital wallets, and NFC.
-  humanURL: https://api.cantaloupe.com/seed-api/v1/payment-processing
-  properties:
-  - type: Documentation
-    url: https://api.cantaloupe.com/seed-api/v1/payment-processing
-- name: Sales Tracking
-  description: Retrieve real-time sales data for analysis and reporting.
-  humanURL: https://api.cantaloupe.com/seed-api/v1/sales-tracking
-  properties:
-  - type: Documentation
-    url: https://api.cantaloupe.com/seed-api/v1/sales-tracking
-- name: Billing
-  description: Streamline transaction processing and generate billing reports across
-    multiple business channels.
-  humanURL: https://api.cantaloupe.com/seed-api/v1/billing
-  properties:
-  - type: Documentation
-    url: https://api.cantaloupe.com/seed-api/v1/billing
+  - aid: seed-platform:seed-platform
+    name: SEED Platform
+    tags:
+      - API
+    humanURL: https://seed-platform.org/code_documentation/2.14.0/api.html
+    properties:
+      - url: https://seed-platform.org/code_documentation/2.14.0/api.html
+        type: Documentation
+    description: >-
+      The Standard Energy Efficiency Data Platform (SEED) Platform is an
+      open-source software application designed to manage building performance
+      data (such as required by a benchmarking ordinance) which can be costly
+      and time consuming for states, local governments and other organizations.
+      SEED helps users combine data from multiple sources, clean and validate
+      it, and generate queries and reports.
+name: SEED Platform
+tags:
+  - Energy
+  - Buildings
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2024-11-07'
+modified: '2024-11-14'
+position: Consumer
+description: >-
+  The Standard Energy Efficiency Data Platform (SEED) Platform is an open-source
+  software application designed to manage building performance data (such as
+  required by a benchmarking ordinance) which can be costly and time consuming
+  for states, local governments and other organizations. SEED helps users
+  combine data from multiple sources, clean and validate it, and generate
+  queries and reports.
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+specificationVersion: '0.19'
