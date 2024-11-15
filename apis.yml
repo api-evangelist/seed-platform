@@ -25,12 +25,15 @@ apis:
       Streamline transaction processing and generate billing reports across
       multiple business channels.
 name: Seed API
-image: >-
-  https://www.cantaloupe.com/wp-content/uploads/2020/01/payments-and-processing-header-1.svg
-description: >-
-  Seed API enables connection to Cantaloupe's cloud services for cashless
-  payment processing, real-time sales tracking, and business management.
 tags:
   - Payments
   - Sales
+image: >-
+  https://www.cantaloupe.com/wp-content/uploads/2020/01/payments-and-processing-header-1.svg
 modified: '2024-11-14'
+description: >-
+  Seed API enables connection to Cantaloupe's cloud services for cashless
+  payment processing, real-time sales tracking, and business management.
+type: Index
+position: Consumer
+access: 3rd-Party
