@@ -27,7 +27,7 @@ apis:
     description: >-
       Streamline transaction processing and generate billing reports across
       multiple business channels.
-name: Seed API
+name: Seed
 tags:
   - Payments
   - Sales
