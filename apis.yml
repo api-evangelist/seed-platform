@@ -1,6 +1,9 @@
 aid: seed
 url: >-
   https://raw.githubusercontent.com/api-search/seed-platform/refs/heads/main/apis.yml
+common:
+  - type: GitHubOrganization
+    url: https://github.com/SEED-platform
 apis:
   - aid: seed:payment-processing-api
     name: Payment Processing
