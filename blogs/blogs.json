@@ -1,0 +1,21 @@
+{
+  "repo": "seed-platform",
+  "feeds": [
+    {
+      "source": "https://cantaloupe.com/feed",
+      "feed_url": "https://cantaloupe.com/feed",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://github.com/SEED-platform",
+      "feed_url": "https://github.com/SEED-platform",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 16
+}
