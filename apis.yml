@@ -38,6 +38,18 @@ name: Seed
 tags:
   - Payments
   - Sales
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: >-
   https://www.cantaloupe.com/wp-content/uploads/2020/01/payments-and-processing-header-1.svg
 modified: '2024-11-14'
