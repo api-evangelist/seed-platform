@@ -1,4 +1,4 @@
-aid: seed
+aid: seed-platform
 url: >-
   https://raw.githubusercontent.com/api-search/seed-platform/refs/heads/main/apis.yml
 common:
