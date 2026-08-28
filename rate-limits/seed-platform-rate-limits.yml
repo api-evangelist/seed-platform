@@ -2,96 +2,49 @@ specification: API Commons Rate Limits
 specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
 provider: Seed
-providerId: seed
+providerId: seed-platform
+generated: '2026-08-28'
+method: searched
+source: >-
+  Full search of www.cantaloupe.com (sitemap-driven), the Seed API product page,
+  the help centre, and the live api.seedlive.com host.
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-08-28'
+supersedes: >-
+  A 2026-05-04 bulk-sweep scaffold that published invented per-minute and
+  per-month quotas (10/min free, 100/min professional, 1000/min enterprise) and
+  an invented X-RateLimit-* header set for an API that documents none of it. The
+  scaffold is removed. This file records the honest zero.
 tags:
   - Payments
-  - Sales
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Seed API surface. Captures per-tier quotas,
-  burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to be replaced
-  with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Payment Processing
-      - Sales Tracking
-      - Billing
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Payment Processing
-      - Sales Tracking
-      - Billing
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Payment Processing
-      - Sales Tracking
-      - Billing
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Payment Processing
-      - Sales Tracking
-      - Billing
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Payment Processing
-      - Sales Tracking
-      - Billing
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+description: >-
+  Cantaloupe publishes no rate limits for the Seed API. There is no API
+  reference, no developer portal, and no machine-readable contract in which a
+  limit or a response header could be documented, and the live API host is
+  gated to anonymous callers so no limit signal can be observed either.
+limits: []
+limit_count: 0
+headers: {}
+headers_note: >-
+  No rate-limit response headers are documented. None could be observed:
+  api.seedlive.com (AWS API Gateway) answers every anonymous request with HTTP
+  403 and the body {"message":"Missing Authentication Token"}, carrying no
+  RateLimit-*, X-RateLimit-* or Retry-After header.
+responseCodes: {}
+policies: []
+evidence:
+  - url: https://www.cantaloupe.com/products/integrations/seed-api/
+    status: 200
+    finding: Product/marketing page; no limits, no reference, no base URL.
+  - url: https://www.cantaloupe.com/sitemap_index.xml
+    status: 200
+    finding: >-
+      95 pages and 93 help articles enumerated; no developer, API-reference or
+      rate-limit page exists on the site.
+  - url: https://api.seedlive.com/
+    status: 403
+    finding: >-
+      {"message":"Missing Authentication Token"} — no rate-limit headers on the
+      anonymous response.
 maintainers: []

@@ -1,62 +1,225 @@
 aid: seed-platform
 url: >-
   https://raw.githubusercontent.com/api-search/seed-platform/refs/heads/main/apis.yml
-specificationVersion: '0.23'
-common:
-  - type: DomainSecurity
-    url: security/seed-platform-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/SEED-platform
-  - type: Blog
-    url: https://cantaloupe.com/feed
-apis:
-  - aid: seed:payment-processing-api
-    name: Payment Processing
-    humanURL: https://api.cantaloupe.com/seed-api/v1/payment-processing
-    properties:
-      - url: https://api.cantaloupe.com/seed-api/v1/payment-processing
-        type: Documentation
-    description: >-
-      Process cashless payments through various methods, including debit/credit
-      cards, digital wallets, and NFC.
-  - aid: seed:sales-tracking-api
-    name: Sales Tracking
-    humanURL: https://api.cantaloupe.com/seed-api/v1/sales-tracking
-    properties:
-      - url: https://api.cantaloupe.com/seed-api/v1/sales-tracking
-        type: Documentation
-    description: Retrieve real-time sales data for analysis and reporting.
-  - aid: seed:billing-api
-    name: Billing
-    humanURL: https://api.cantaloupe.com/seed-api/v1/billing
-    properties:
-      - url: https://api.cantaloupe.com/seed-api/v1/billing
-        type: Documentation
-    description: >-
-      Streamline transaction processing and generate billing reports across
-      multiple business channels.
 name: Seed
-tags:
-  - Payments
-  - Sales
-accessModel:
-  pricing: freemium
-  onboarding: unknown
-  trial: false
-  try_now: false
-  public: false
-  label: Freemium
-  confidence: medium
-  source:
-  - plans
-  generated: '2026-07-22'
-  method: derived
-image: >-
-  https://www.cantaloupe.com/wp-content/uploads/2020/01/payments-and-processing-header-1.svg
-modified: '2024-11-14'
-description: >-
-  Seed API enables connection to Cantaloupe's cloud services for cashless
-  payment processing, real-time sales tracking, and business management.
+specificationVersion: '0.23'
 type: Index
 position: Consumer
 access: 3rd-Party
+description: >-
+  Seed is Cantaloupe's cloud platform for self-service and unattended retail —
+  vending, micro markets, office coffee and pantry, amusement, and laundry. The
+  Seed family spans Seed Live (device management bundled with a Cantaloupe card
+  reader), Seed Cashless+, Seed Pro (route, warehouse, planogram and analytics
+  management), Seed Markets and Seed Delivery. The Seed API is Cantaloupe's
+  integration surface for connecting third-party point-of-sale and self-service
+  equipment to those cloud services: cashless payment acceptance across major
+  card brands, digital and mobile wallets and NFC through a single gateway;
+  consolidated billing that compiles transactions, fees and payments into one
+  bill across business channels; and real-time sales data exposed as
+  performance, payment-mix and profitability reporting across an operator's
+  fleet. Cantaloupe publishes no public developer portal, API reference, base
+  URL, authentication guide or machine-readable contract for the Seed API —
+  access is arranged through Cantaloupe sales and support.
+image: https://www.cantaloupe.com/wp-content/uploads/2024/10/canLogo.png
+tags:
+  - Payments
+  - Cashless Payments
+  - Vending
+  - Micro Markets
+  - Unattended Retail
+  - Self-Service Retail
+  - Point of Sale
+  - Sales Reporting
+  - Billing
+  - Office Coffee
+created: '2024-11-14'
+modified: '2026-08-28'
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+accessModel:
+  pricing: contact-sales
+  onboarding: sales-gated
+  trial: false
+  try_now: false
+  public: false
+  label: Contact Sales
+  confidence: high
+  source:
+    - https://www.cantaloupe.com/products/integrations/seed-api/
+    - https://www.cantaloupe.com/pricing/
+  generated: '2026-08-28'
+  method: searched
+common:
+  - type: Website
+    url: https://www.cantaloupe.com/
+  - type: Documentation
+    url: https://www.cantaloupe.com/products/integrations/seed-api/
+  - type: Support
+    url: https://www.cantaloupe.com/help-center/
+  - type: Community
+    url: https://community.cantaloupe.com/community-learn-more
+  - type: Blog
+    url: https://www.cantaloupe.com/feed/
+  - type: Pricing
+    url: https://www.cantaloupe.com/pricing/
+  - type: Login
+    url: https://www.mycantaloupe.com/login/
+  - type: TermsOfService
+    url: >-
+      https://www.cantaloupe.com/wp-content/uploads/2024/10/Cantaloupe-Website-Terms-of-Use.pdf
+  - type: PrivacyPolicy
+    url: https://www.cantaloupe.com/legal/cantaloupe-privacy-policy/
+  - type: StatusPage
+    url: https://www.cantaloupe.com/status/
+  - type: ChangeLog
+    url: https://www.cantaloupe.com/release-notes/
+  - type: ChangeLog
+    url: changelog/seed-platform-changelog.yml
+  - type: Compliance
+    url: https://www.cantaloupe.com/legal/compliance/
+  - type: Security
+    url: security/seed-platform-vulnerability-disclosure.yml
+  - type: VulnerabilityDisclosure
+    url: security/seed-platform-vulnerability-disclosure.yml
+  - type: TrustCenter
+    url: security/seed-platform-trust-center.yml
+  - type: DomainSecurity
+    url: security/seed-platform-domain-security.yml
+  - type: Conformance
+    url: conformance/seed-platform-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/seed-platform-lifecycle.yml
+  - type: Plans
+    url: plans/seed-platform-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/seed-platform-rate-limits.yml
+  - type: Packages
+    url: packages/seed-platform-packages.yml
+  - type: LLMsTxt
+    url: llms/seed-platform-llms.txt
+apis:
+  - aid: seed:payment-processing-api
+    name: Payment Processing
+    humanURL: https://www.cantaloupe.com/products/integrations/seed-api/
+    description: >-
+      Accept cashless payments through the Seed API — debit and credit cards,
+      mobile and digital wallets, and NFC — with Cantaloupe acting as a single
+      gateway to the major card brands and wallet providers.
+    tags:
+      - Payments
+      - Cashless Payments
+      - Point of Sale
+    properties:
+      - type: Documentation
+        url: https://www.cantaloupe.com/products/integrations/seed-api/
+      - type: Website
+        url: https://www.cantaloupe.com/products/integrations/seed-api/
+      - type: Support
+        url: https://www.cantaloupe.com/help-center/
+    x-base-url-note: >-
+      No baseURL recorded. Cantaloupe publishes no API reference or base URL for
+      the Seed API on any public page (probed 2026-08-28: sitemap of
+      www.cantaloupe.com carries no developer/API-reference page). The prior
+      value, https://api.cantaloupe.com/seed-api/v1/payment-processing, was
+      removed — that host does not resolve (NXDOMAIN, 2026-08-28). A live
+      Cantaloupe-operated API host exists at https://api.seedlive.com but is an
+      AWS API Gateway that answers 403 "Missing Authentication Token" on every
+      path, and no Cantaloupe document names it as the Seed API base, so it is
+      recorded as evidence rather than asserted as the base URL.
+  - aid: seed:sales-tracking-api
+    name: Sales Tracking
+    humanURL: https://www.cantaloupe.com/products/integrations/seed-api/
+    description: >-
+      Retrieve real-time sales data from the Seed cloud for analysis and
+      reporting across an operator's vending, micro market, and office coffee
+      fleet, including payment-mix and profitability views.
+    tags:
+      - Sales Reporting
+      - Analytics
+      - Vending
+    properties:
+      - type: Documentation
+        url: https://www.cantaloupe.com/products/integrations/seed-api/
+      - type: Website
+        url: https://www.cantaloupe.com/products/integrations/seed-api/
+      - type: Support
+        url: https://www.cantaloupe.com/help-center/
+    x-base-url-note: >-
+      No baseURL recorded — see the note on seed:payment-processing-api. The
+      prior https://api.cantaloupe.com/seed-api/v1/sales-tracking was removed as
+      a non-resolving host (NXDOMAIN, 2026-08-28).
+  - aid: seed:billing-api
+    name: Billing
+    humanURL: https://www.cantaloupe.com/products/integrations/seed-api/
+    description: >-
+      Compile transactions, fees, and payments into a single consolidated bill
+      across vending, micro markets, and office coffee and pantry channels, and
+      generate billing reports from the Seed cloud.
+    tags:
+      - Billing
+      - Payments
+      - Reconciliation
+    properties:
+      - type: Documentation
+        url: https://www.cantaloupe.com/products/integrations/seed-api/
+      - type: Website
+        url: https://www.cantaloupe.com/products/integrations/seed-api/
+      - type: Support
+        url: https://www.cantaloupe.com/help-center/
+    x-base-url-note: >-
+      No baseURL recorded — see the note on seed:payment-processing-api. The
+      prior https://api.cantaloupe.com/seed-api/v1/billing was removed as a
+      non-resolving host (NXDOMAIN, 2026-08-28).
+x-attribution-corrections:
+  - date: '2026-08-28'
+    removed: 'common[] type: GitHubOrganization -> https://github.com/SEED-platform'
+    reason: >-
+      Name-collision misattribution. github.com/SEED-platform is the Standard
+      Energy Efficiency Data Platform, a U.S. Department of Energy / NREL
+      open-source building-energy data project (contact info@seed-platform.org,
+      website energy.gov/eere/buildings/standard-energy-efficiency-data-platform).
+      It has no relationship to Cantaloupe's Seed. The pointer was added by an
+      automated GitHub/LinkedIn sweep on 2026-05-19 that matched on the slug.
+  - date: '2026-08-28'
+    removed: 'apis[].humanURL / Documentation -> https://api.cantaloupe.com/seed-api/v1/*'
+    reason: >-
+      api.cantaloupe.com does not resolve (NXDOMAIN, verified 2026-08-28). The
+      three URLs were scaffold values present since the first commit and never
+      named a real host.
+  - date: '2026-08-28'
+    note: >-
+      No GitHubOrganization pointer emitted. github.com/Cantaloupe-Inc exists
+      (HTTP 200) but is unverified, carries no description or website, and has
+      zero public repositories, so ownership cannot be established from the
+      public record.
+  - date: '2026-08-28'
+    note: >-
+      Catalog overlap: all/cantaloupe-seed-api/ profiles the same Cantaloupe
+      Seed API surface. These two repos should be reconciled by a catalog pass;
+      this run left both in place and corrected the facts in this one.
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Cantaloupe markets the Seed API on a product page with no reference, no base
+    URL and no sign-up — only "Contact Us" and a phone number — and the live
+    Cantaloupe-operated API host api.seedlive.com is an AWS API Gateway that
+    answers every anonymous request, /openapi.json included, with 403
+    {"message":"Missing Authentication Token"}.
+  evidence:
+    - url: https://www.cantaloupe.com/products/integrations/seed-api/
+      status: 200
+    - url: https://api.seedlive.com/openapi.json
+      status: 403
+    - url: https://api.cantaloupe.com/seed-api/v1/payment-processing
+      status: 0
+    - url: https://www.cantaloupe.com/sitemap_index.xml
+      status: 200
+  checked: '2026-08-28'

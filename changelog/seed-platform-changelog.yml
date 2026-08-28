@@ -1,0 +1,79 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.cantaloupe.com/release-notes/
+provider: Seed
+providerId: seed-platform
+description: >-
+  Cantaloupe publishes dated release notes at the company level. Every published
+  entry is for Cheq by Cantaloupe; no Seed or Seed API release note exists. The
+  entries are recorded so the surface is captured honestly, with that coverage
+  gap stated rather than implied.
+url: https://www.cantaloupe.com/release-notes/
+scheme: dated product release notes, no version numbers
+current_version: null
+current_version_note: >-
+  Release notes are titled by product and month, not by an API or platform
+  version. No version identifier is published.
+cadence: irregular; roughly every 2-4 months since February 2024
+entry_count: 12
+seed_entry_count: 0
+coverage_note: >-
+  index page states "Updates for Cantaloupe products, including Cheq" and offers
+  a "By Product" filter, but Cheq is the only product with published notes.
+entries:
+  - date: '2026-06-05'
+    title: Cheq by Cantaloupe | June 2026
+    product: Cheq
+    url: https://www.cantaloupe.com/articles/release-note/cheq-by-cantaloupe-june-2026/
+    summary: The latest updates and enhancements for Cheq by Cantaloupe.
+    breaking: unknown
+  - date: '2026-02-12'
+    title: Cheq by Cantaloupe | February 2026
+    product: Cheq
+    url: https://www.cantaloupe.com/articles/release-note/cheq-by-cantaloupe-february-2026/
+    summary: The latest updates and enhancements for Cheq by Cantaloupe.
+    breaking: unknown
+  - date: '2025-10-20'
+    title: Cheq by Cantaloupe | October 2025
+    product: Cheq
+    url: https://www.cantaloupe.com/articles/release-note/cheq-by-cantaloupe-october-2025/
+    summary: The latest updates and enhancements for Cheq by Cantaloupe.
+    breaking: unknown
+  - date: '2025-07-02'
+    title: Cheq by Cantaloupe | July 2025
+    product: Cheq
+    url: https://www.cantaloupe.com/articles/release-note/cheq-by-cantaloupe-july-2025/
+    summary: The latest updates and enhancements for Cheq by Cantaloupe.
+    breaking: unknown
+  - date: '2025-04-08'
+    title: Cheq by Cantaloupe | April 2025
+    product: Cheq
+    url: https://www.cantaloupe.com/articles/release-note/cheq-by-cantaloupe-april-2025/
+    summary: Product, platform, reporting, and Cheq in Action updates for April 2025.
+    breaking: unknown
+  - date: '2025-02-03'
+    title: Cheq | February 2025
+    product: Cheq
+    url: https://www.cantaloupe.com/articles/release-note/cheq-february-2025/
+    summary: Product, platform, and Cheq in Action updates for February 2025.
+    breaking: unknown
+  - date: '2024-11-05'
+    title: Cheq | November 2024
+    product: Cheq
+    url: https://www.cantaloupe.com/articles/release-note/november-2024-cheq/
+    breaking: unknown
+  - date: '2024-08-07'
+    title: Cheq | August 2024
+    product: Cheq
+    url: https://www.cantaloupe.com/articles/release-note/cheq-august-2024/
+    breaking: unknown
+breaking_change_policy:
+  published: false
+  note: >-
+    No entry classifies changes as breaking vs additive, and no breaking-change
+    or migration policy is published.
+x-evidence:
+  fetched: '2026-08-28'
+  url: https://www.cantaloupe.com/release-notes/
+  http_status: 200
+  content_type: text/html

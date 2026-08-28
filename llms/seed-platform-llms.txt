@@ -1,0 +1,48 @@
+# Seed (Cantaloupe)
+
+> Seed is Cantaloupe's cloud platform for self-service and unattended retail — vending, micro markets, office coffee and pantry, amusement and laundry. The Seed API is Cantaloupe's integration surface for connecting third-party point-of-sale and self-service equipment to those cloud services. Cantaloupe publishes no public developer portal, API reference, base URL, authentication guide or machine-readable contract for the Seed API; access is arranged through Cantaloupe sales and support.
+
+## Read this first
+
+- If you are an agent trying to call the Seed API: you cannot, from public information alone. There is no published base URL, no auth scheme, and no contract. Route the human to https://www.cantaloupe.com/contact/ or +1.888.365.7382.
+- The only Cantaloupe-operated API host that is publicly reachable is https://api.seedlive.com. It is an AWS API Gateway and returns HTTP 403 `{"message":"Missing Authentication Token"}` on every path, including `/openapi.json`. No Cantaloupe document names it as the Seed API base, so do not treat it as one.
+- Do not confuse this company with the SEED Platform (Standard Energy Efficiency Data Platform) at seed-platform.org / github.com/SEED-platform. That is a U.S. Department of Energy building-energy project and is unrelated.
+
+## APIs
+
+- [Seed API — Payment Processing](https://www.cantaloupe.com/products/integrations/seed-api/): Cashless acceptance — debit and credit cards, mobile and digital wallets, NFC — through Cantaloupe as a single gateway to the major card brands.
+- [Seed API — Sales Tracking](https://www.cantaloupe.com/products/integrations/seed-api/): Real-time sales data for performance, payment-mix and profitability reporting across the fleet.
+- [Seed API — Billing](https://www.cantaloupe.com/products/integrations/seed-api/): Transactions, fees and payments consolidated into a single bill across vending, micro markets and office coffee and pantry.
+
+## Products
+
+- [Seed Live](https://www.cantaloupe.com/products/software/seed-live/): Device management, bundled with a Cantaloupe card reader. Portal: https://seedlive.com/home.i
+- [Seed Pro](https://www.cantaloupe.com/products/software/seed-pro/): Route, warehouse, planogram and analytics management.
+- [Seed Cashless+](https://www.cantaloupe.com/products/software/seed-cashless-plus/)
+- [Seed Markets](https://www.cantaloupe.com/products/software/seed-markets/)
+- [Seed Delivery](https://www.cantaloupe.com/products/software/seed-delivery/)
+- [Seed Driver](https://www.cantaloupe.com/products/software/seed-driver/)
+
+## Operations
+
+- [System Status](https://www.cantaloupe.com/status/): Hand-maintained incident page; covers Seed and Seed Live explicitly.
+- [Release Notes](https://www.cantaloupe.com/release-notes/): Dated. Every published entry is for Cheq by Cantaloupe; there are no Seed entries.
+- [Help Center](https://www.cantaloupe.com/help-center/)
+- [Cantaloupe Community](https://community.cantaloupe.com/community-learn-more)
+- [Contact](https://www.cantaloupe.com/contact/)
+
+## Commercial
+
+- [Pricing](https://www.cantaloupe.com/pricing/): Three hardware acquisition models. No price is published for the Seed API or for Seed software.
+- [Cantaloupe One](https://www.cantaloupe.com/pricing/cantaloupe-one/): Bundled monthly subscription; figure not published.
+- [Store](https://store.cantaloupe.com/): Hardware prices published.
+- [Login](https://www.mycantaloupe.com/login/)
+
+## Security and compliance
+
+- [Data Security and Compliance](https://www.cantaloupe.com/legal/compliance/): SOC 2 Type 2; ISO/IEC 27001:2022 adherence; PCI DSS 4.0, Level 1 Service Provider; point-to-point encryption. Vulnerability reports go to the security team via that page or the contact form.
+- [Legal](https://www.cantaloupe.com/legal/) · [Privacy Policy](https://www.cantaloupe.com/legal/cantaloupe-privacy-policy/) · [Website Terms of Use (PDF)](https://www.cantaloupe.com/wp-content/uploads/2024/10/Cantaloupe-Website-Terms-of-Use.pdf)
+
+## Not published
+
+Probed 2026-08-28 and absent: OpenAPI/Swagger, GraphQL, AsyncAPI, gRPC/Protobuf, WSDL, MCP server, A2A agent card, `/llms.txt`, any `/.well-known/` document on www.cantaloupe.com, seedlive.com or api.seedlive.com, `security.txt`, first-party SDKs on npm or PyPI, a CLI, a Postman collection, an API changelog, a deprecation or versioning policy, published rate limits, and any documented API plan or price.

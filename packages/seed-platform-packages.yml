@@ -1,0 +1,53 @@
+generated: '2026-08-28'
+method: searched
+source: >-
+  npm registry search, PyPI, and a full search of www.cantaloupe.com for SDK,
+  client-library or sample-code links.
+provider: Seed
+providerId: seed-platform
+description: >-
+  No first-party Seed or Cantaloupe client library exists on any public package
+  registry, and Cantaloupe links to no SDK, sample code, or source repository
+  from any public page.
+packages: []
+package_count: 0
+official_count: 0
+registries_searched:
+  - registry: npm
+    query: ['cantaloupe', 'seedlive', 'seed-api', 'cantaloupe-seed']
+    result: >-
+      No first-party package. Nearest name matches are unrelated third-party
+      projects — cantaloupe (TypeScript utilities, codeberg.org/kensand),
+      cantaloupe-cli (for cantaloupe.io), cantaloupe-image-server (the Cantaloupe
+      IIIF image server, an unrelated open-source project).
+  - registry: pypi
+    query: ['cantaloupe', 'seedlive', 'cantaloupe-seed']
+    result: >-
+      cantaloupe returns HTTP 200 but is the unrelated IIIF image-server
+      tooling; seedlive and cantaloupe-seed both 404.
+  - registry: rubygems
+    result: not searched — no evidence of any Ruby client to look for.
+  - registry: nuget
+    result: not searched — no evidence of any .NET client to look for.
+  - registry: maven-central
+    result: not searched — no evidence of any JVM client to look for.
+  - registry: pkg.go.dev
+    result: not searched — no evidence of any Go client to look for.
+  - registry: crates.io
+    result: not searched — no evidence of any Rust client to look for.
+source_repositories:
+  github_org_probed:
+    - url: https://github.com/Cantaloupe-Inc
+      status: 200
+      finding: >-
+        Organization exists but is unverified, has no description or website,
+        and holds zero public repositories. Ownership cannot be established, so
+        no GitHubOrganization pointer is emitted.
+    - url: https://github.com/SEED-platform
+      status: 200
+      finding: >-
+        NOT this company. Standard Energy Efficiency Data Platform (U.S. DOE /
+        NREL building-energy project). Removed from apis.yml this round.
+pointer_note: >-
+  A Packages pointer is emitted so the honest zero is readable. NO SDKs pointer
+  is emitted — sdk_count must not be credited when no client library exists.

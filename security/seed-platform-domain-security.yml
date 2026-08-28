@@ -1,9 +1,28 @@
-generated: '2026-07-11'
+generated: '2026-08-28'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
-- host: api.cantaloupe.com
-  https: false
+- host: www.cantaloupe.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 24 00:09:27 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+- host: seedlive.com
+  https: true
+  hsts: true
+  hsts_max_age: 31536000
+  hsts_include_subdomains: true
+  note: >-
+    Seed Live customer portal, Cantaloupe-operated. Probed by hand 2026-08-28;
+    not reachable from apis.yml hosts because Cantaloupe publishes no Seed API
+    base URL.
+- host: api.seedlive.com
+  https: true
+  hsts: false
+  note: >-
+    AWS API Gateway. HTTP 403 {"message":"Missing Authentication Token"} on every
+    path. No HSTS header on the anonymous response.
 domains:
 - domain: cantaloupe.com
   dnssec: false
@@ -11,3 +30,16 @@ domains:
   spf: true
   dmarc: true
   dmarc_policy: none
+- domain: seedlive.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
+  note: >-
+    No SPF TXT, no _dmarc record, no CAA, no DS. Probed by hand 2026-08-28.
+x-hand-probes:
+  date: '2026-08-28'
+  note: >-
+    The seedlive.com and api.seedlive.com rows were added by the enrichment pass,
+    not by probe-domain-security.py, which reads only apis.yml baseURL/servers
+    hosts and this provider publishes no base URL.

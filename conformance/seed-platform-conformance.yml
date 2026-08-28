@@ -1,0 +1,96 @@
+generated: '2026-08-28'
+method: searched
+source: >-
+  https://www.cantaloupe.com/legal/compliance/ and
+  https://www.cantaloupe.com/products/integrations/seed-api/
+provider: Seed
+providerId: seed-platform
+description: >-
+  Standards conformance for Cantaloupe's Seed platform. Cross-cutting API
+  standards cannot be asserted either way: Cantaloupe publishes no
+  machine-readable contract and no API reference for the Seed API, so there is
+  nothing to read securitySchemes, error media types, or pagination conventions
+  out of. Payments and security programs ARE published and are recorded here.
+standards:
+  - id: pci-dss
+    name: PCI DSS 4.0, Level 1 Service Provider
+    conforms: true
+    evidence: >-
+      "Cantaloupe is also PCI-DSS – Level 1 – Service Provider certified... fully
+      compliant with PCI DSS including version 4.0" —
+      https://www.cantaloupe.com/legal/compliance/
+    third_party_record: https://www.visa.com/splisting/searchGrsp.do
+  - id: soc2-type2
+    name: SOC 2 Type 2
+    conforms: true
+    evidence: https://www.cantaloupe.com/legal/compliance/
+  - id: iso-27001-2022
+    name: ISO/IEC 27001:2022
+    conforms: true
+    evidence: >-
+      "We adhere to ISO/IEC 27001:2022" —
+      https://www.cantaloupe.com/legal/compliance/. Adherence claimed; no
+      certificate number or registrar published.
+  - id: p2pe
+    name: Point-to-Point Encryption
+    conforms: true
+    evidence: >-
+      P2PE described as implemented across cashless acceptance products —
+      https://www.cantaloupe.com/legal/compliance/. Not claimed as a PCI SSC
+      validated P2PE solution.
+  - id: emv
+    name: EMV chip and contactless acceptance
+    conforms: true
+    evidence: >-
+      Seed API accepts "debit/credit cards, mobile/digital wallets, and NFC"
+      through a single gateway to the major card brands —
+      https://www.cantaloupe.com/products/integrations/seed-api/
+  - id: oauth2
+    conforms: unknown
+    evidence: >-
+      No public API reference or machine-readable contract; the live host
+      api.seedlive.com returns 403 "Missing Authentication Token" on every path
+      and issues no OAuth challenge. Not assertable.
+  - id: oidc
+    conforms: unknown
+    evidence: /.well-known/openid-configuration 404 on every Cantaloupe host.
+  - id: rfc9457-problem-details
+    conforms: unknown
+    evidence: No published error reference or contract to read response media types from.
+  - id: json-api
+    conforms: unknown
+    evidence: No published contract.
+  - id: rfc8594-sunset-header
+    conforms: unknown
+    evidence: No published deprecation policy or API reference.
+domain_standard:
+  market: Unattended retail / vending telemetry and payments
+  candidates_checked:
+    - id: nama-dex-ucs
+      name: DEX/UCS (Data Exchange / Uniform Communication Standard, EVA/NAMA)
+      declared_in_contract: false
+      operational_evidence: >-
+        Cantaloupe's own status page and help centre reference DEX data
+        processing as a first-class Seed concept ("Seed DEX Processing Delay",
+        07.09.26; "How to verify DEX compatibility";
+        "Engage DEX troubleshooting guide";
+        "Seed Cashless DEX verification"). DEX/UCS is the vending industry's
+        machine-data standard and Seed clearly speaks it at the device layer.
+      conforms: unproven
+      note: >-
+        REWARD-ONLY check, and it is not awarded. DEX support is visible in
+        operations and support content, but no Seed API contract or reference
+        declares a DEX/UCS message shape, so there is nothing in a contract to
+        point at. Recorded so a later round can confirm it if Cantaloupe ever
+        publishes the API reference.
+    - id: nayax-vpos-mdb
+      name: MDB / MDB-to-cashless device protocols
+      declared_in_contract: false
+      conforms: unproven
+      note: Device-level protocol; not expressed in any published Seed contract.
+  awarded: false
+x-note: >-
+  The one machine-readable HTTP interface reachable on a Cantaloupe domain is
+  the stock WordPress REST API at https://www.cantaloupe.com/wp-json/, present
+  because the marketing site runs WordPress. It is not a Seed product API and is
+  deliberately not recorded as a contract.

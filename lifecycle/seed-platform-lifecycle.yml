@@ -1,0 +1,76 @@
+generated: '2026-08-28'
+method: searched
+source: >-
+  https://www.cantaloupe.com/status/, https://www.cantaloupe.com/release-notes/,
+  https://www.cantaloupe.com/legal/
+provider: Seed
+providerId: seed-platform
+description: >-
+  Lifecycle posture for Cantaloupe's Seed platform. Cantaloupe operates a status
+  page and a dated release-notes surface at the company level. It publishes no
+  API versioning policy, no deprecation or sunset policy, no SLA, and no API
+  reference in which deprecated operations could be marked.
+status_page:
+  present: true
+  url: https://www.cantaloupe.com/status/
+  type: hand-maintained page
+  machine_readable: false
+  components: false
+  subscribe: false
+  history: >-
+    Dated incident entries with a current notice and a "Previous Updates" list.
+    Latest at probe time: 07.09.26 12:00pm ET, "Seed DEX Processing Delay" —
+    resolved. Prior entries 07.08.26, 03.24.26, 03.23.26.
+  note: >-
+    Named Seed explicitly (Seed and Seed Live device traffic, Seed Alerts page),
+    so it does cover this platform rather than only sibling products.
+  http_status: 200
+change_log:
+  present: true
+  url: https://www.cantaloupe.com/release-notes/
+  scheme: dated product release notes
+  covers: >-
+    Every one of the 12 published release notes is for Cheq by Cantaloupe. The
+    index says "Updates for Cantaloupe products, including Cheq," but no Seed or
+    Seed API release note has been published.
+  seed_entries: 0
+  http_status: 200
+versioning:
+  policy_published: false
+  scheme: unknown
+  note: >-
+    The removed scaffold URLs implied a /v1/ path segment; no Cantaloupe page
+    states a versioning scheme, so nothing is asserted.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  rfc8594: unknown
+  deprecated_operations: []
+  note: >-
+    No deprecation or sunset policy is published, and there is no API reference
+    or machine-readable contract in which deprecated operations could be marked.
+    No Deprecation pointer is emitted.
+sla:
+  published: false
+  note: >-
+    No uptime or support SLA is published publicly. Service terms are carried in
+    the Master Services Agreement, which must be executed to purchase Cantaloupe
+    services —
+    https://www.cantaloupe.com/wp-content/uploads/2024/10/Cantaloupe-Master-Services-Agreement.pdf
+support:
+  help_center: https://www.cantaloupe.com/help-center/
+  community: https://community.cantaloupe.com/community-learn-more
+  contact: https://www.cantaloupe.com/contact/
+  phone: '+1.888.365.7382'
+corporate:
+  entity: Cantaloupe, LLC.
+  address: 101 Lindenwood Drive Suite 405, Malvern, PA 19355
+  note: >-
+    Site footer reads "Cantaloupe, LLC." as of 2026-08-28; earlier catalog
+    material refers to Cantaloupe, Inc. Recorded as observed, not interpreted.
+pointers:
+  - type: StatusPage
+    url: https://www.cantaloupe.com/status/
+  - type: ChangeLog
+    url: https://www.cantaloupe.com/release-notes/

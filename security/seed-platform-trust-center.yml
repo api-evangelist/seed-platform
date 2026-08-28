@@ -1,0 +1,77 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.cantaloupe.com/legal/compliance/
+provider: Seed
+providerId: seed-platform
+description: >-
+  Cantaloupe's Data Security and Compliance page is the company's trust surface.
+  It names four security and payments programs in the provider's own words. There
+  is no separate trust.cantaloupe.com portal, no downloadable report request
+  flow, and no subprocessor list.
+trust_center:
+  present: true
+  type: compliance-page
+  url: https://www.cantaloupe.com/legal/compliance/
+  portal: false
+  report_request: false
+  subprocessors_published: false
+certifications:
+  - name: SOC 2 Type 2
+    status: certified
+    scope: >-
+      Trust Services Criteria as defined by the AICPA — Security,
+      Confidentiality, Availability, Processing Integrity, and Privacy.
+    quote: >-
+      "Yes, we are proud that our organization is SOC 2 Type 2 compliant."
+    evidence: https://www.cantaloupe.com/legal/compliance/
+  - name: ISO/IEC 27001:2022
+    status: adherence-claimed
+    scope: Information security management.
+    quote: >-
+      "We adhere to ISO/IEC 27001:2022, the globally recognized standard for
+      managing and protecting sensitive information, ensuring data integrity,
+      confidentiality, and availability."
+    evidence: https://www.cantaloupe.com/legal/compliance/
+    note: >-
+      The page states adherence to the standard; it does not state a certificate
+      number, issuing body, or certification date.
+  - name: PCI DSS
+    version: '4.0'
+    status: certified
+    level: Level 1 Service Provider
+    quote: >-
+      "Not only is Cantaloupe PCI-DSS compliant, but Cantaloupe is also PCI-DSS
+      – Level 1 – Service Provider certified... fully compliant with PCI DSS
+      including version 4.0."
+    third_party_verification: https://www.visa.com/splisting/searchGrsp.do
+    verification_note: >-
+      Cantaloupe points readers at Visa's Global Registry of Service Providers
+      as the independent record of its PCI DSS compliance.
+    evidence: https://www.cantaloupe.com/legal/compliance/
+  - name: Point-to-Point Encryption (P2PE)
+    status: implemented
+    scope: >-
+      Card data encrypted from the card reader through to the processor; card
+      data is not stored at the point of acceptance.
+    quote: >-
+      "By using P2PE, we ensure that sensitive card data is not stored at the
+      point of acceptance and is protected from interception during
+      transmission."
+    evidence: https://www.cantaloupe.com/legal/compliance/
+    note: >-
+      Described as an implemented technology. The page does not claim a PCI SSC
+      validated P2PE solution listing.
+privacy:
+  policy: https://www.cantaloupe.com/legal/cantaloupe-privacy-policy/
+  cookie_policy: https://www.cantaloupe.com/legal/cantaloupe-privacy-policy/#cookie-policy
+legal:
+  page: https://www.cantaloupe.com/legal/
+  master_services_agreement: >-
+    https://www.cantaloupe.com/wp-content/uploads/2024/10/Cantaloupe-Master-Services-Agreement.pdf
+  website_terms_of_use: >-
+    https://www.cantaloupe.com/wp-content/uploads/2024/10/Cantaloupe-Website-Terms-of-Use.pdf
+x-evidence:
+  fetched: '2026-08-28'
+  url: https://www.cantaloupe.com/legal/compliance/
+  http_status: 200
+  content_type: text/html

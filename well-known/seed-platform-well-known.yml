@@ -1,0 +1,111 @@
+generated: '2026-08-28'
+method: probed
+source: >-
+  Direct HTTP probes of every host in apis.yml plus the live Cantaloupe-operated
+  API host discovered during contract discovery.
+description: >-
+  Well-known discovery probe for Cantaloupe's Seed platform. No /.well-known/
+  document is served on any host. Each host was probed with a deliberate
+  nonsense control path to prove the 404s are genuine and not a catch-all.
+hit_count: 0
+hosts:
+  - host: https://www.cantaloupe.com
+    note: >-
+      WordPress marketing site. Every /.well-known/ path returns the site's real
+      404 template (HTTP 404, 74,251 bytes) including the nonsense control path,
+      so these are genuine negatives.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+    soft_404_control:
+      path: /.well-known/this-should-not-exist-xyz
+      status: 404
+      bytes: 74251
+  - host: https://seedlive.com
+    note: >-
+      Seed Live customer portal (Cantaloupe, LLC). Apache 404 on every
+      /.well-known/ path including the control.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+    soft_404_control:
+      path: /.well-known/this-should-not-exist-xyz
+      status: 404
+      bytes: 236
+  - host: https://api.seedlive.com
+    note: >-
+      AWS API Gateway. Every path — /.well-known/*, /openapi.json, /swagger.json,
+      the root, and the nonsense control — returns HTTP 403 with the body
+      {"message":"Missing Authentication Token"} (42 bytes). Nothing anonymous is
+      readable here; this is a gate, not an absence.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/oauth-protected-resource
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+      - path: /.well-known/agent-card.json
+        status: 403
+      - path: /.well-known/agent.json
+        status: 403
+    soft_404_control:
+      path: /.well-known/this-should-not-exist-xyz
+      status: 403
+      bytes: 42
+  - host: https://www.mycantaloupe.com
+    note: >-
+      Seed login host. Genuine 404s — the nonsense control path returns the same
+      1,245-byte 404 page as every /.well-known/ path.
+    documents:
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+    soft_404_control:
+      path: /nonsense-control-xyz
+      status: 404
+      bytes: 1245
+  - host: https://api.cantaloupe.com
+    note: >-
+      Host does not resolve (NXDOMAIN). This was the baseURL/humanURL host
+      carried in apis.yml since the repo's first commit; it has been removed.
+    documents: []
+pointers_emitted: []
+pointer_note: >-
+  No WellKnown and no SecurityTxt pointer is emitted. Every probe missed, and a
+  file recording an absence must not be wired as a presence.
