@@ -40,6 +40,17 @@ tags:
   - Micro Markets
   - Unattended Retail
   - Self-Service Retail
+  - Point-of-Sale
+  - Sales Reporting
+  - Billing
+  - Office Coffee
+tags_raw:
+  - Payments
+  - Cashless Payments
+  - Vending
+  - Micro Markets
+  - Unattended Retail
+  - Self-Service Retail
   - Point of Sale
   - Sales Reporting
   - Billing
@@ -119,6 +130,10 @@ apis:
       mobile and digital wallets, and NFC — with Cantaloupe acting as a single
       gateway to the major card brands and wallet providers.
     tags:
+      - Payments
+      - Cashless Payments
+      - Point-of-Sale
+    tags_raw:
       - Payments
       - Cashless Payments
       - Point of Sale
