@@ -15,7 +15,7 @@ deliveryModel:
   method: derived
 specificationVersion: '0.23'
 type: Index
-position: Consumer
+position: Consuming
 access: 3rd-Party
 description: >-
   Seed is Cantaloupe's cloud platform for self-service and unattended retail —
