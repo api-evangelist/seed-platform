@@ -74,6 +74,8 @@ accessModel:
   generated: '2026-08-28'
   method: searched
 common:
+  - type: About
+    url: https://www.cantaloupe.com/company/about/
   - type: Website
     url: https://www.cantaloupe.com/
   - type: Documentation
