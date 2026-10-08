@@ -88,3 +88,28 @@ plan_count: 3
 plan_count_note: >-
   Three named commercial models are published. Zero of them carry a published
   price, and none of them is an API plan.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - negotiated
+  units: []
+  plans:
+  - name: Purchase outright
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Finance your hardware
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Cantaloupe One
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
